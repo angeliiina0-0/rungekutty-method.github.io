@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    padding: 30px 35px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #5a6e7a;
+    font-size: 0.95rem;
+}
+
+.theory {
+    background: #f0f4f8;
+    padding: 20px 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.theory h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #1e3c72;
+}
+
+.theory p {
+    color: #2c3e50;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.formulas {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 25px;
+    margin: 15px 0;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.formulas .final {
+    grid-column: span 2;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.calculator {
+    margin-bottom: 20px;
+}
+
+.calculator h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: monospace;
+    background: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 0.75rem;
+}
+
+.examples span {
+    color: #5a6e7a;
+}
+
+.ex {
+    background: #e8f0fe;
+    border: 1px solid #c5d5e6;
+    padding: 4px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 0.75rem;
+}
+
+.ex:hover {
+    background: #2a5298;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button.secondary {
+    background: #95a5a6;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.results {
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.results h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+.graph {
+    background: #fafafa;
+    border-radius: 20px;
+    padding: 8px;
+    margin-bottom: 20px;
+    height: 360px;
+}
+
+.table-title {
+    font-weight: 600;
+    margin: 15px 0 8px 0;
+    color: #1e3c72;
+}
+
+.table-wrap {
+    max-height: 280px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #2a5298;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 15px 0;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 20px;
+    }
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .formulas {
+        grid-template-columns: 1fr;
+    }
+    .formulas .final {
+        grid-column: span 1;
+    }
+}
