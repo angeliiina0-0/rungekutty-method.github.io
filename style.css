@@ -55,6 +55,17 @@ header p {
     margin-bottom: 12px;
 }
 
+.final-formula {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a3c5e;
+    background: #e8f0fe;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
 .formulas {
     background: white;
     padding: 15px 20px;
