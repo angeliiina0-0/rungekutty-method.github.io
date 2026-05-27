@@ -67,6 +67,14 @@
                     <input type="number" id="step" value="0.1" step="0.001">
                 </div>
             </div>
+
+            <div class="field">
+                <label>Точное решение (для сравнения)</label>
+                <input type="text" id="exactFunc" placeholder="например: e^x  или  x²">
+                <div class="info-small">Если вы знаете точную формулу, введите её. Тогда на графике появится пунктирная
+                    линия для сравнения.</div>
+            </div>
+
             <div class="buttons">
                 <button id="calcBtn">Решить</button>
                 <button id="resetBtn" class="secondary">Сбросить</button>
@@ -77,7 +85,7 @@
             <h2>Результат</h2>
             <div id="graph" class="graph"></div>
             <div id="errorMsg" class="error"></div>
-            
+
             <div class="table-title">Таблица значений</div>
             <div class="table-wrap">
                 <table id="resultTable">
@@ -85,6 +93,8 @@
                         <tr>
                             <th>x</th>
                             <th>y (RK4)</th>
+                            <th id="exactHeader" style="display: none;">Точное решение</th>
+                            <th id="errorHeader" style="display: none;">Погрешность</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -97,4 +107,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

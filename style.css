@@ -54,7 +54,6 @@ header p {
     line-height: 1.5;
     margin-bottom: 12px;
 }
-
 .final-formula {
     text-align: center;
     font-size: 1.2rem;
@@ -154,6 +153,12 @@ textarea {
 .ex:hover {
     background: #2a5298;
     color: white;
+}
+
+.info-small {
+    font-size: 0.7rem;
+    color: #6c757d;
+    margin-top: 5px;
 }
 
 .buttons {
